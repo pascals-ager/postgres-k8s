@@ -1,0 +1,13 @@
+apiVersion: v1                                      # API version
+kind: Service                                       # Type of kubernetes resource 
+metadata:
+  name: pascals-postgres-db-service                         # Name of the resource
+  namespace: pgo
+  labels:                                           # Labels that will be applied to the resource
+    app: pascals-postgres-db
+spec:
+  ports:
+    - port: 5432
+  selector:                                         # Selects any Pod with labels `app=fullstack-postgres,tier=postgres`
+    app: pascals-postgres-db
+    tier: postgres
