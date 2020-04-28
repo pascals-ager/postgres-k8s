@@ -4,7 +4,7 @@ metadata:                                     # Claim name and labels
   name: postgres-pv-claim
   namespace: pgo
   labels:
-    app: pascals-postgres-db
+    app: test-postgres-db
 spec:                                         # Access mode and resource limits
   storageClassName: manual                    # Request a certain storage class
   accessModes:

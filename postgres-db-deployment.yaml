@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment                                # Type of the kubernetes resource
 metadata:
-  name: pascals-postgres-db                       # Name of the deployment
+  name: test-postgres-db                       # Name of the deployment
   namespace: pgo
   labels:                                        # Labels applied to this deployment 
-    app: pascals-postgres-db
+    app: test-postgres-db
 spec:
   selector:
     matchLabels:                                  # This deployment applies to the Pods matching the specified labels
-      app: pascals-postgres-db
+      app: test-postgres-db
       tier: postgres
   replicas: 1
   template:                                       # Template for the Pods in this deployment
     metadata:
       labels:                                     # Labels to be applied to the Pods in this deployment
-        app: pascals-postgres-db
+        app: test-postgres-db
         tier: postgres
     spec:                                         # The spec for the containers that will be run inside the Pods in this deployment
       containers:
